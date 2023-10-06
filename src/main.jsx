@@ -30,7 +30,7 @@ const router = createHashRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Router basename="CSRPITOY">
+    <Router basename="/CSRPITOY">
       <Routes>
         <Route path="/" element={<App />} />
         {/* Add other routes here */}
