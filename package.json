@@ -1,7 +1,7 @@
 {
   "homepage": "https://biboyboy04.github.io/CSRPITOY",
   "name": "capstone",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
