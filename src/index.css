@@ -25,11 +25,12 @@
 
 @font-face {
   font-family: "indie flower";
-  src: url("images/fonts/IndieFlower-Regular.ttf");
+
+  src: url("../public/images/fonts/IndieFlower-Regular.ttf");
 }
 @font-face {
   font-family: montserrat;
-  src: url("images/fonts/Montserrat-VariableFont_wght.ttf");
+  src: url("../public/images/fonts/Montserrat-VariableFont_wght.ttf");
 }
 
 body {
@@ -137,13 +138,13 @@ body {
 
 /* backgrounds */
 #grass {
-  background-image: url("images/grass.png");
+  background-image: url("../public/images/grass.png");
   background-size: auto 350px;
   background-repeat: space-between;
   height: 100vh;
 }
 #grass2l {
-  background-image: url("images/grass.png");
+  background-image: url("../public/images/grass.png");
   background-size: auto 190px;
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -151,7 +152,7 @@ body {
   height: 100vh;
 }
 #grass2r {
-  background-image: url("images/grass.png");
+  background-image: url("../public/images/grass.png");
   background-size: auto 190px;
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -159,13 +160,13 @@ body {
   height: 100vh;
 }
 #grassland {
-  background-image: url("images/valley2.png");
+  background-image: url("../public/images/valley2.png");
   height: 107.5vh;
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
 }
 #sun {
-  background-image: url("images/sun.png");
+  background-image: url("../public/images/sun.png");
   height: 640px;
   background-size: auto 900px;
   background-repeat: no-repeat;
@@ -173,12 +174,12 @@ body {
   margin-left: 270px;
 }
 #clouds {
-  background-image: url("images/clouds.png");
+  background-image: url("../public/images/clouds.png");
   height: 300px;
   background-size: auto 400px;
 }
 #tree1 {
-  background-image: url("images/tree1.png");
+  background-image: url("../public/images/tree1.png");
   height: 100vh;
   background-size: auto 620px;
   background-repeat: no-repeat;
@@ -186,7 +187,7 @@ body {
   margin-left: -200px;
 }
 #tree1-2r {
-  background-image: url("images/tree1.png");
+  background-image: url("../public/images/tree1.png");
   height: 100vh;
   background-size: auto 640px;
   background-repeat: no-repeat;
@@ -194,7 +195,7 @@ body {
   margin-left: 275px;
 }
 #tree2r {
-  background-image: url("images/tree2.png");
+  background-image: url("../public/images/tree2.png");
   height: 100vh;
   background-size: auto 440px;
   background-repeat: no-repeat;
@@ -202,7 +203,7 @@ body {
   margin-left: 180px;
 }
 #tree2-2l {
-  background-image: url("images/tree2.png");
+  background-image: url("../public/images/tree2.png");
   height: 100vh;
   background-size: auto 440px;
   background-repeat: no-repeat;
@@ -210,18 +211,18 @@ body {
   margin-left: -160px;
 }
 #mnt1 {
-  background-image: url("images/mnt1.png");
+  background-image: url("../public/images/mnt1.png");
   height: 86vh;
   background-size: auto 530px;
   background-repeat: no-repeat;
 }
 #mnt2 {
-  background-image: url("images/mnt2.png");
+  background-image: url("../public/images/mnt2.png");
   height: 710px;
   background-size: auto 220px;
 }
 #back {
-  background-image: url("images/back.png");
+  background-image: url("../public/images/back.png");
   height: 740px;
   background-size: auto 520px;
   background-repeat: no-repeat;
