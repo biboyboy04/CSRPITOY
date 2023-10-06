@@ -6,9 +6,13 @@ import Story1 from "./pages/Story1.jsx";
 import Story2 from "./pages/Story2.jsx";
 import Story3 from "./pages/Story3.jsx";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  createHashRouter,
+} from "react-router-dom";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
