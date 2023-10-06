@@ -1,0 +1,870 @@
+/* index.css */
+/* Global styles */
+.loading {
+  text-align: center;
+  background-color: #282c34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  animation: transitionIn 1s;
+  animation-delay: 2s;
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 1;
+    transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 0;
+    transform: rotateX(0);
+  }
+}
+
+@font-face {
+  font-family: "indie flower";
+  src: url("images/fonts/IndieFlower-Regular.ttf");
+}
+@font-face {
+  font-family: montserrat;
+  src: url("images/fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.animation,
+.animation_layer {
+  height: 100vh;
+}
+
+.animation {
+  display: block;
+  position: relative;
+  z-index: 10;
+  animation: easein 0.5s;
+}
+
+@keyframes easein {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animation_layer {
+  background-position: bottom center;
+  background-size: auto 1038px;
+  background-repeat: repeat-x;
+  width: 100%;
+  position: absolute;
+}
+.animation_layer.parallax {
+  position: fixed;
+}
+
+.aesop {
+  width: 100%;
+  height: 100%;
+  margin-top: -20rem;
+  font-size: 43px;
+  color: #660000;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: indie flower;
+}
+.aesop.storyTitle {
+  padding-top: 10rem;
+  letter-spacing: 3px;
+  color: white;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+}
+.Readbtn {
+  display: inline-block; /* Use inline-block to allow the text and arrow to be on the same line */
+  border-radius: 4px;
+  background-color: #113b54;
+  color: #ffffff;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  width: 120px;
+  height: 60px;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-family: indie flower;
+  font-weight: bold;
+}
+
+.Readbtn span {
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s;
+  letter-spacing: 4px;
+  padding-left: 3px;
+}
+
+.Readbtn span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 100%; /* Position the arrow below the text */
+  left: 50%; /* Center the arrow horizontally */
+  transform: translateX(-50%) rotate(90deg); /* Rotate the arrow 90 degrees and center it horizontally */
+}
+
+.Readbtn:hover {
+  height: 70px;
+  width: 125px;
+  background-color: #1d5575;
+}
+
+.Readbtn:hover span:after {
+  opacity: 1;
+}
+
+/* backgrounds */
+#grass {
+  background-image: url("images/grass.png");
+  background-size: auto 350px;
+  background-repeat: space-between;
+  height: 100vh;
+}
+#grass2l {
+  background-image: url("images/grass.png");
+  background-size: auto 190px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  margin-left: -100px;
+  height: 100vh;
+}
+#grass2r {
+  background-image: url("images/grass.png");
+  background-size: auto 190px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  margin-left: 150px;
+  height: 100vh;
+}
+#grassland {
+  background-image: url("images/valley2.png");
+  height: 107.5vh;
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+}
+#sun {
+  background-image: url("images/sun.png");
+  height: 640px;
+  background-size: auto 900px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  margin-left: 270px;
+}
+#clouds {
+  background-image: url("images/clouds.png");
+  height: 300px;
+  background-size: auto 400px;
+}
+#tree1 {
+  background-image: url("images/tree1.png");
+  height: 100vh;
+  background-size: auto 620px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  margin-left: -200px;
+}
+#tree1-2r {
+  background-image: url("images/tree1.png");
+  height: 100vh;
+  background-size: auto 640px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  margin-left: 275px;
+}
+#tree2r {
+  background-image: url("images/tree2.png");
+  height: 100vh;
+  background-size: auto 440px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  margin-left: 180px;
+}
+#tree2-2l {
+  background-image: url("images/tree2.png");
+  height: 100vh;
+  background-size: auto 440px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  margin-left: -160px;
+}
+#mnt1 {
+  background-image: url("images/mnt1.png");
+  height: 86vh;
+  background-size: auto 530px;
+  background-repeat: no-repeat;
+}
+#mnt2 {
+  background-image: url("images/mnt2.png");
+  height: 710px;
+  background-size: auto 220px;
+}
+#back {
+  background-image: url("images/back.png");
+  height: 740px;
+  background-size: auto 520px;
+  background-repeat: no-repeat;
+}
+
+.backgroundParallax {
+  background: linear-gradient(to bottom, #325e0a, #325e0a, #162b04);
+  width: 100%;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #44da87;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px;
+}
+
+/* Styles for the active (open) state */
+.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.active .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.active .line2 {
+  opacity: 0;
+}
+
+.active .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 768px) {
+  #navbar-container {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    margin-top: 20px;
+  }
+
+  /* Styles for the navigation links in active state */
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  /* Styles for the hamburger icon in active state */
+  .hamburger.active .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger.active .line2 {
+    opacity: 0;
+  }
+
+  .hamburger.active .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .hamburger {
+    display: flex;
+    margin-top: 20px;
+  }
+}
+
+/* Main Page CSS */
+
+.background-image {
+  /* background-image: url('images/1.png');
+  background-size:cover; */
+  /* position: fixed; */
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+}
+
+.background-image.fade-in {
+  animation: fadeIn 2.5s ease forwards;
+}
+/* Define the fade-in animation using @keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Existing CSS styles are the same as before */
+/* .storylist{
+  height: 100vh;
+  background-color: #e01a1a;
+} */
+/* Responsive styles for the image grid */
+.image-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 00px;
+  flex-wrap: wrap;
+}
+
+/* Responsive styles for the image containers */
+.image-container {
+  position: relative;
+  margin: 30px;
+  width: 100%; /* Set the container to occupy the full width on small screens */
+  max-width: 300px; /* Set a maximum width for the container */
+  height: 100%;
+}
+
+.image-container img {
+  width: 100%; /*Make the image responsive, filling the container */
+  height: 100%; /*Ensure the image maintains its aspect ratio */
+  object-fit: cover;
+  border: 2px solid #000;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Remove the hover effect for small screens */
+@media screen and (max-width: 480px) {
+  .image-container:hover img {
+    transform: none;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 101%;
+  height: 100.5%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h2 {
+  color: #fff;
+  font-size: 26px;
+  margin-bottom: 8px;
+  font-family: indie flower;
+}
+
+.overlay a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  border: 1px solid #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.overlay a:hover {
+  background-color: #fff;
+  color: #000;
+}
+/* END OF MAIN PAGE CSS */
+
+/* START OF MODAL (STORY VIEW)  */
+
+/* The Modal (background) */
+.modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 150px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/opacity/see-through */
+  color: #fff;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  padding: 0.4rem;
+}
+
+.close:hover,
+.close:focus {
+  color: #b6b6b6;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2px 16px;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0); /* Black w/opacity/see-through */
+  color: white;
+}
+
+.modal-body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /* change this when there is font, only for testing*/
+  padding: 2px 16px;
+  display: flex;
+  font-size: 26px;
+  justify-content: space-evenly;
+}
+
+.storyProfile {
+  margin: 1rem;
+}
+.storyProfile img {
+  width: 320px;
+  height: 450px;
+  object-fit: cover;
+}
+.storyDescription {
+  margin: 0rem 0.8rem 1rem;
+  padding: 0.7rem;
+}
+
+.musicRecommender {
+  margin: 0rem 0.5rem 1rem;
+  padding: 0.7rem;
+}
+.musicContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.5rem;
+  background-color: #888;
+  border-radius: 0.5rem;
+  padding: 0.6rem;
+}
+.musicContainer img {
+  width: 65px;
+  height: 60px;
+  object-fit: cover;
+  margin-right: 0.8rem;
+}
+.musicProfileParent h6 {
+  margin-bottom: -1.6rem;
+}
+.musicProfileParent {
+  margin-top: -2.65rem;
+}
+
+.startButton {
+  display: flex;
+  align-items: flex-end;
+}
+
+.startButton button {
+  background-color: #183d06;
+  color: white;
+  padding: 10px;
+  border-style: none;
+  border-radius: 10px;
+  height: 6vh;
+  width: 15vh;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+}
+
+/* END OF MODAL (STORY VIEW) */
+
+.startButton button:hover {
+  background-color: #388b0f;
+  cursor: pointer;
+  color: white;
+}
+
+/* storylayout START */
+
+.storyLayout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #242424; /* Dark gray color */
+  color: #dcdcdc; /* Light gray color for text */
+  overflow: auto;
+  animation: easein 0.5s;
+}
+
+.storyContent {
+  background: transparent;
+  position: relative;
+  width: 75vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+  text-justify: inter-word;
+  align-items: center;
+  padding: 20px;
+  font-family: montserrat;
+}
+.storyContent h1 {
+  font-size: 50px;
+}
+.storyContent p {
+  font-size: 40px;
+}
+.backBtncontainer {
+  position: fixed;
+  left: 0;
+  top: 10px;
+  text-align: center;
+  z-index: 1;
+  width: 5%;
+  height: 10%;
+  transition: background 0.3s;
+  outline: none;
+  background-position: center;
+  border-radius: 50%;
+  margin-left: 15px;
+  text-decoration: none;
+}
+.backBtn {
+  margin-top: 20px;
+  font-size: 45px;
+  text-decoration: none;
+  color: white;
+}
+.backBtncontainer:hover {
+  cursor: pointer;
+  background: #242424 radial-gradient(circle, transparent 1%, #242424 1%)
+    center/15000%;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+.backBtncontainer:active {
+  background-color: #1a1a1a;
+  background-size: 100%;
+  transition: background 0s;
+  border-radius: 50%;
+}
+
+/* storylayout END */
+
+/* Spotify Playlist */
+#arrowUpDown {
+  top: 3%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+#spotifyWrapper {
+  position: relative;
+  width: 100%;
+  height: 352px; /* Set a fixed height for the container */
+  background-color: grey;
+  border-radius: 12px 12px 0 0;
+  display: flex; /* Add display: flex; to make flex properties work */
+  transition: transform 0.3s ease;
+}
+
+.hide-embed {
+  transform: translateY(92%);
+}
+
+#spotifyPlaylist {
+  margin-top: 2.3rem;
+}
+
+.spotifyContainer {
+  margin-top: auto; /* Push the container to the bottom of the parent using flexbox */
+  position: sticky; /* Keep the container sticky at the bottom */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-height: 80vh; /* Limit the height to 80% of the viewport height */
+  z-index: 999;
+  background-color: transparent;
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #242424;
+}
+
+/* BRAND SLIDER */
+.sliderContainer {
+  width: 100%;
+  height: 25vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20rem;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.sliderContainer h1 {
+  margin-bottom: 40px;
+  color: white;
+  font-size: 35px;
+  letter-spacing: 2px;
+  font-family: montserrat;
+}
+
+.swiper {
+  width: 100%;
+  height: 15vh;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 15vh;
+  object-fit: cover;
+}
+
+/* FOOTER */
+/*FOOTER */
+.footer {
+  background: #162b04;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  font-family: montserrat;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+ul {
+  list-style: none;
+}
+.footer-col {
+  width: 20%;
+  padding: 0 15px;
+}
+.footer-col img {
+  width: 100%;
+  padding-top: 2rem;
+  object-fit: cover;
+}
+.footer-col h4 {
+  font-size: 21px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+.footer .credit {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.6rem;
+  font-weight: normal;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.footer .credit span {
+  color: #addfad;
+}
+
+/* top right emotion text */
+.top-right-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: montserrat;
+}
+
+.top-right-text {
+  color: white;
+}
+
+.top-right-analyze {
+  color: white;
+}
