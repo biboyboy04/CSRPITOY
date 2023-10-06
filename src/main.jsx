@@ -7,6 +7,7 @@ import Story2 from "./pages/Story2.jsx";
 import Story3 from "./pages/Story3.jsx";
 
 import { createHashRouter, RouterProvider } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const router = createHashRouter([
   {
@@ -29,6 +30,11 @@ const router = createHashRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Router basename="CSRPITOY">
+      <Routes>
+        <Route path="/" element={<App />} />
+        {/* Add other routes here */}
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
