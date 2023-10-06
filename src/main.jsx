@@ -6,30 +6,29 @@ import Story1 from "./pages/Story1.jsx";
 import Story2 from "./pages/Story2.jsx";
 import Story3 from "./pages/Story3.jsx";
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-  createHashRouter,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-const router = createHashRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "1",
-    element: <Story1 />,
-  },
-  {
-    path: "2",
-    element: <Story2 />,
-  },
-  {
-    path: "3",
-    element: <Story3 />,
-  },
-]);
+const router = createBrowserRouter({
+  basename: process.env.PUBLIC_URL,
+  routes: [
+    {
+      path: "/",
+      element: <App />,
+    },
+    {
+      path: "1",
+      element: <Story1 />,
+    },
+    {
+      path: "2",
+      element: <Story2 />,
+    },
+    {
+      path: "3",
+      element: <Story3 />,
+    },
+  ],
+});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

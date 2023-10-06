@@ -1,33 +1,33 @@
-import { useState, useEffect } from "react"
-import { useRef } from "react"
-import Mainpage from "./components/Mainpage"
+import { useState, useEffect } from "react";
+import { useRef } from "react";
+import Mainpage from "./components/Mainpage";
 // import Navbar from './components/Navbar'
-import StoryView from "./components/StoryView"
-import { Parallax, ParallaxLayer } from "@react-spring/parallax"
-import TitleAnimation from "./components/TitleAnimation"
-import Read from "./components/Read"
-import Loading from "./components/Loading"
-import BrandSlider from "./components/BrandSlider"
-import Footer from "./components/footer"
+import StoryView from "./components/StoryView";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import TitleAnimation from "./components/TitleAnimation";
+import Read from "./components/Read";
+import Loading from "./components/Loading";
+import BrandSlider from "./components/BrandSlider";
+import Footer from "./components/footer";
 
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false)
-  const [selectedStoryId, setSelectedStoryId] = useState(null)
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedStoryId, setSelectedStoryId] = useState(null);
 
   //loading screen
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true)
+    setLoading(true);
 
     setTimeout(() => {
-      setLoading(false)
-    }, 3000)
-  }, [])
+      setLoading(false);
+    }, 3000);
+  }, []);
 
   const toggleModal = () => {
-    setIsModalOpen((prevIsModalOpen) => !prevIsModalOpen)
-  }
+    setIsModalOpen((prevIsModalOpen) => !prevIsModalOpen);
+  };
 
   //for dynamic modal, get data from database. for now fixed values
   const [story, setStory] = useState([
@@ -52,16 +52,16 @@ function App() {
       imageUrl: "/images/tree.jpg", // Add the image URL here
       desc: "In this fable, a young tree, the Plane Tree, is unhappy with its appearance and wishes to look like other trees, such as the Pine and the Palm. It constantly complains and asks the gods to change its form. The gods respond by transforming the Plane Tree into various shapes, but none of them satisfy the tree. Eventually, the Plane Tree asks to return to its original form, realizing that being content with what it naturally is, is the best way to be. The moral of the story teaches the value of self-acceptance and the futility of constant longing for something different.",
     },
-  ])
+  ]);
 
   const viewStory = (id) => {
-    setSelectedStoryId(id)
-  }
-  const ref = useRef()
+    setSelectedStoryId(id);
+  };
+  const ref = useRef();
 
   const handleButton = () => {
-    ref.current.scrollTo(1)
-  }
+    ref.current.scrollTo(1);
+  };
 
   return (
     <div>
@@ -159,7 +159,7 @@ function App() {
         </Parallax>
       )}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
